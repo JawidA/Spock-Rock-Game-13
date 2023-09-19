@@ -8,7 +8,6 @@ const resultText = document.getElementById('resultText');
 const playerIcons = document.querySelectorAll('.player-contaner .icons i');
 const computerIcons = document.querySelectorAll('.computer-contaner .icons i');
 
-
 let playerScore = 0;
 let computerScore = 0;
 let computerChoice = "";
@@ -36,15 +35,12 @@ function computerAction () {
 };
 
 
-
-
-
 function checkWinner () {
     if (playerChoice === computerChoice){
         resultText.textContent = "it's a tie."
     } else {
         const choice = choices[playerChoice];
-        console.log(choice.defeats.indexOf(computerChoice))
+        // console.log(choice.defeats.indexOf(computerChoice))
         if (choice.defeats.indexOf(computerChoice) > -1){
             resultText.textContent = 'You Won!';
             playerScore++;
@@ -55,8 +51,7 @@ function checkWinner () {
             computerScoreEl.textContent = computerScore;
         }
     }
-}
-
+};
 
 document.querySelector('.player-contaner').addEventListener('click', function (e) {
     const clickTarget = e.target;
@@ -68,10 +63,7 @@ document.querySelector('.player-contaner').addEventListener('click', function (e
         playerChoice = clickTarget.getAttribute('title').toLowerCase();
         computerAction();
 
-
-        checkWinner()
-        console.log(playerChoice, computerChoice)
-        // console.log(choices[computerChoice])
-        
+        checkWinner();
+        console.log(playerChoice, computerChoice);        
     };
 });
