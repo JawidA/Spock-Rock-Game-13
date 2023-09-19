@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-contaner {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    width: 440px;
+    max-width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: rgb(95, 95, 233);
+    padding: 10px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contaner {
+    padding: 30px 40px;
+}
+
+.contaner div h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.selected {
+    color: black !important;
+}
+
+#playerChoice {
+    color: rgb(95, 95, 233);
+}
+
+#computerChoice {
+    color: rgb(235, 33, 33);
+}
+
+.contaner .icons  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player-contaner .icons i {
+    color: rgb(95, 95, 233);
+}
+
+.computer-contaner .icons i {
+    color: rgb(235, 33, 33);
+}
+
+.contaner div i {
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+.reset {
+    margin: 40px 0;
+}
+
+.reset i {
+    font-size: 1.5rem !important;
+}
+
+.computer-contaner {
+    margin-top: 30px;
+}
+
+.result-contaner {
+    text-align: center;
+    font-size: 1.8rem;
+}

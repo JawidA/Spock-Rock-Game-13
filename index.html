@@ -9,7 +9,43 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    good
+    <div class="main-contaner">
+        <div class="header">
+            <h1 class="title">Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <div class="contaner">
+            <div class="player-contaner" id="player">
+                <h2>You - <span id="playerScore">0</span><span id="playerChoice"> --- choice</span></h2>
+                <div class="icons">
+                    <i class="far fa-hand-rock" title="Rock" id="playerRock"></i>
+                    <i class="far fa-hand-paper" title="Paper" id="playerPaper"></i>
+                    <i class="far fa-hand-scissors" title="Scissors" id="playerScissors"></i>
+                    <i class="far fa-hand-lizard" title="Lizard" id="playerLizard"></i>
+                    <i class="far fa-hand-spock" title="Spock" id="playerSpock"></i>
+                </div>
+            </div>
+
+            <div class="computer-contaner" id="computer">
+                <h2>Computer - <span id="computerScore">0</span><span id="computerChoice"> --- choice</span></h2>
+                <div class="icons">
+                    <i class="far fa-hand-rock" title="Rock" id="computerRock"></i>
+                    <i class="far fa-hand-paper" title="Paper" id="computerPaper"></i>
+                    <i class="far fa-hand-scissors" title="Scissors" id="computerScissors"></i>
+                    <i class="far fa-hand-lizard" title="Lizard" id="computerLizard"></i>
+                    <i class="far fa-hand-spock" title="Spock" id="computerSpock"></i>
+                </div>
+            </div>
+
+            <div class="reset">
+                <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+            </div>
+
+            <div class="result-contaner">
+                <h3 class="result-text" id="resultText">You Won!</h3>
+            </div>
+        </div>
+    </div>
+
     
 </body>
 </html>
