@@ -1,3 +1,6 @@
+import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
+// The confetti effect is not working and I don't know the reason.
+// The problem is that when confetti s started it makes it background disappear.
 
 const playerChoiceEl = document.getElementById("playerChoice");
 const playerScoreEl = document.getElementById('playerScore');
@@ -23,7 +26,22 @@ const choices = {
 
 function resetSelected () {
     playerIcons.forEach(icon => icon.classList.remove("selected"));
-    computerIcons.forEach(icon => icon.classList.remove("selected"))
+    computerIcons.forEach(icon => icon.classList.remove("selected"));
+    // stopConfetti(); 
+    // removeConfetti();
+};
+// window.resetSelected = resetSelected;
+
+// Reseting everything (we are using onclick in html. so, no need for event listener)
+function resetAll() {
+    resetSelected();
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreEl.textContent = playerScore;
+    computerScoreEl.textContent = computerScore;
+    playerChoiceEl.textContent =  '';
+    computerChoiceEl.textContent =  '';
+    resultText.textContent = "Make a Choice";
 };
 
 
@@ -45,6 +63,7 @@ function checkWinner () {
             resultText.textContent = 'You Won!';
             playerScore++;
             playerScoreEl.textContent = playerScore;
+            // startConfetti();
         } else {
             resultText.textContent = "You Lost!"
             computerScore++;
@@ -52,6 +71,7 @@ function checkWinner () {
         }
     }
 };
+// window.checkWinner = checkWinner;
 
 document.querySelector('.player-contaner').addEventListener('click', function (e) {
     const clickTarget = e.target;
@@ -62,8 +82,6 @@ document.querySelector('.player-contaner').addEventListener('click', function (e
         playerChoiceEl.textContent = ` --- ${clickTarget.getAttribute('title')}`;
         playerChoice = clickTarget.getAttribute('title').toLowerCase();
         computerAction();
-
         checkWinner();
-        console.log(playerChoice, computerChoice);        
     };
 });

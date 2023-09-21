@@ -6,7 +6,7 @@
     <title>Spock Rock Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-    <script src="app.js" defer></script>
+    <script src="app.js" defer type="module"></script>
 </head>
 <body>
     <div class="main-contaner">
@@ -15,7 +15,7 @@
         </div>
         <div class="contaner">
             <div class="player-contaner" id="player">
-                <h2>You - <span id="playerScore">0</span><span id="playerChoice"> --- choice</span></h2>
+                <h2>You - <span id="playerScore">0</span><span id="playerChoice"></span></h2>
                 <div class="icons">
                     <i class="far fa-hand-rock" title="Rock" id="playerRock"></i>
                     <i class="far fa-hand-paper" title="Paper" id="playerPaper"></i>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="computer-contaner" id="computer">
-                <h2>Computer - <span id="computerScore">0</span><span id="computerChoice"> --- choice</span></h2>
+                <h2>Computer - <span id="computerScore">0</span><span id="computerChoice"></span></h2>
                 <div class="icons">
                     <i class="far fa-hand-rock" title="Rock" id="computerRock"></i>
                     <i class="far fa-hand-paper" title="Paper" id="computerPaper"></i>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="reset">
-                <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+                <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
             </div>
 
             <div class="result-contaner">
