@@ -43,7 +43,7 @@ function resetAll() {
     computerChoiceEl.textContent =  '';
     resultText.textContent = "Make a Choice";
 };
-
+window.resetAll = resetAll;
 
 function computerAction () {
     const randomNumber = Math.floor(Math.random() * 5);
